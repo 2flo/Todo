@@ -15,10 +15,11 @@
             <button type="submit">Ajouter</button>
         </form>
         <ul>
-            <li>Tâche n°1</li>
-            <li>Tâche n°2</li>
-            <li>Tâche n°3</li>
+            <% for(var i = 0; i < todos.length; i++){ %>
+                <li><%= todos[i].item %></li>
+           <% } %>
         </ul>
     </div>
+    <script type="text/javascript" src="/assets/todo-list.js"></script>
 </body>
 </html>
