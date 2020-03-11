@@ -3,7 +3,7 @@ var todoController = require('./Controllers/todoController');
 var app = express();
 
 app.set('view engine', 'ejs');
-app.use('/assets/style.css', express.static('./public'), bodyParser.urlencoded());
+app.use( express.static('./public'), bodyParser.urlencoded());
 
 todoController(app);
 app.listen(3000);
