@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+    <script type="text/javascript" src="/assets/todo-list.js"></script>
     <title>Todo Liste</title>
 </head>
 <body>
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <h1>Ma to-do liste</h1>
     <div id="todo-table">
-        <form action="#" method="post">
+        <form action="#" method="POST">
             <input type="text" name="item" placeholder="Nouvelle tâche" required>
             <button type="submit">Ajouter</button>
         </form>
@@ -20,6 +21,5 @@
            <% } %>
         </ul>
     </div>
-    <script type="text/javascript" src="/assets/todo-list.js"></script>
 </body>
 </html>
