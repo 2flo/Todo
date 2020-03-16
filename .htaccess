@@ -1,0 +1,10 @@
+Content-Type: text/html; charset=utf-8;
+AddType text/html .html;
+AddType application/xhtml+xml .xhtml;
+AddType text/css .css;
+AddType text/javascript .js;
+AddType image/png .png;
+AddType image/jpeg .jpeg;
+AddType image/jpg .jpg;
+Content-Security-Policy: style-src 'assets/style.css'; script-src 'assets/todo-list.js';
+
