@@ -1,0 +1,5 @@
+<Directory "/essai/to-do-list/views/todo.ejs">
+AddType text/css .css
+AddType text/javascript .js
+DirectoryIndex style.css todo-list.js jquery.js
+</Directory>
