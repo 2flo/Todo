@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/views/assets/CSS/style.css" type="text/css"/>
-    <link rel="shortcut icon" type="image/ico" href="IMG/favicon.ico"/>
-    <script type="text/javascript" src="/views/assets/JS/todo-list.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <title>Todo Liste</title>
 </head>
 <body>
+    <script type="text/javascript" src="/views/assets/JS/todo-list.js"></script>
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <h1>Ma to-do liste</h1>
     <div id="todo-table">
@@ -22,5 +21,36 @@
            <% } %>
         </ul>
     </div>
+    <style>
+        h1{
+            color: red;
+            text-align: center;
+        }
+
+        body{
+            background-color: grey;
+        }
+
+        #todo-table{
+            text-align: center;
+            border: 5px solid black;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            width: 30%;
+            margin-left: 35%;
+            background-color: rgb(54, 54, 54);
+        }
+
+        ul{
+            border: 2px solid white;
+            width: 40%;
+            margin-left: 20%;
+            background-color: rgb(155, 153, 153);
+        }
+
+        li{
+            padding: 10%;
+        }
+    </style>
 </body>
 </html>
