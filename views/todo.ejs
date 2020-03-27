@@ -7,8 +7,6 @@
     <title>Todo Liste</title>
 </head>
 <body>
-    <script type="text/javascript" src="/views/assets/JS/todo-list.js"></script>
-    <script src="/node_modules/jquery/dist/jquery.js"></script>
     <h1>Ma to-do liste</h1>
     <div id="todo-table">
         <form action="#" method="POST" enctype="multipart/form-data">
@@ -18,13 +16,14 @@
         <ul>
             <% for(var i = 0; i < todos.length; i++){ %>
                 <li><%= todos[i].item %></li>
-           <% } %>
-        </ul>
-    </div>
-    <style>
+                <% } %>
+            </ul>
+        </div>
+        <style>
         h1{
-            color: red;
+            color:white;
             text-align: center;
+            text-shadow: 1px 1px 2px white;
         }
 
         body{
@@ -51,6 +50,17 @@
         li{
             padding: 10%;
         }
+
+        li:hover{
+            text-decoration-line:line-through red;
+        }
+
+        ul li::marker{
+            color: white;
+            font-size: large;
+        }
     </style>
+    <script src="/views/JS/todo-list.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
 </body>
 </html>
