@@ -1,4 +1,13 @@
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb+srv://test:123@cluster0-lhrvg.gcp.mongodb.net/test');
+
+var todoSchema = new mongoose.Schema({
+  item: String
+});
+var Todo = mongoose.model('Todo', todoSchema);
+var itemOne = Todo({})
 
 var data = [{item: 'Ecouter la compagnie créole'}, {item: 'Apprendre Symfony'}, {item: 'Créer un site perso'}]
 var urlencodedParser = bodyParser.urlencoded({extended: false});

@@ -6,7 +6,8 @@
     "cookie-session": "^1.4.0",
     "ejs": "^2.7.4",
     "express": "^4.17.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "mongoose": "^5.9.6"
   },
   "author": "Floriane Dazin",
   "description": "Une application permettant de classer et ranger vos priorités.",
