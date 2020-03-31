@@ -1,13 +1,16 @@
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
+var mongoose = require('mongoose', {useUnifiedTopology: true});
 
-mongoose.connect('mongodb+srv://test:123@cluster0-lhrvg.gcp.mongodb.net/test');
+mongoose.connect('mongodb+srv://test:123@cluster0-lhrvg.gcp.mongodb.net/test', {useNewUrlParser: true});
 
 var todoSchema = new mongoose.Schema({
   item: String
 });
 var Todo = mongoose.model('Todo', todoSchema);
-var itemOne = Todo({})
+var itemOne = Todo({item: 'Sortir le pain du four'}).save(function(err){
+  if (err) throw err;
+  console.log('item saved');
+});
 
 var data = [{item: 'Ecouter la compagnie créole'}, {item: 'Apprendre Symfony'}, {item: 'Créer un site perso'}]
 var urlencodedParser = bodyParser.urlencoded({extended: false});
