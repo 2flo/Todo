@@ -1,5 +1,6 @@
 var express = require('express');
 var todoController = require('./Controllers/todoController');
+var jquery = require('jquery');
 var app = express();
 
 app.set('view engine', 'ejs');
