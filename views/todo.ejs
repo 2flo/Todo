@@ -11,15 +11,17 @@
     <h1>Ma to-do liste</h1>
     <script src="http://localhost/node_modules/express/public/todo-list.js" type="text/javascript"></script>
     <div id="todo-table">
+        <p>
         <form action="#" method="POST" enctype="multipart/form-data">
             <input type="text" name="item" placeholder="Nouvelle tâche" required>
             <button type="submit">Ajouter</button>
         </form>
         <ul>
             <% for(var i = 0; i < todos.length; i++){ %>
-                <li><%= todos[i].item %></li>
+                <input type="radio" id="list"><%= todos[i].item %></input>
                 <% } %>
         </ul>
+        </p>
     </div>
        
     <script src="http://localhost/node_modules/jquery/dist/jquery.min.js"></script>

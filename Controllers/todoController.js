@@ -22,14 +22,15 @@ module.exports = function(app){
     app.post('/todo', urlencodedParser, function(req, res){
       var newTodo = Todo.push(req.body).save(function(err, data){
         if (err) throw err;
-        res.json(data);
+        res.render(data);
       });
     });
 
     app.delete('/todo/:item', function(req, res){
-      Todo.find({item: req.params.item.replace(/\-/g, " ")}).remove(function(err, data){
+      Todo.find({item: req.params.item.shift()}).remove(function(err, data){
         if (err) throw err;
-        res.json(data);
+        res.render(data);
+        alert("C'est sur? C'est votre dernier mot?");
       });
     });
 };
